@@ -421,7 +421,9 @@ function draw() {
         ctx.fillStyle = '#fff'; ctx.font = '12px "Press Start 2P"';
         ctx.fillText(`WORLD: ${currentWorld} | WAVE: ${wave}`, 20, 30);
         ctx.fillText(`SCORE: ${score}`, 20, 50);
-        ctx.fillStyle = var(--gold); ctx.fillText(`COINS: ${galaxyCoins}`, 20, 70);
+        
+        // --- THIS WAS THE BUG (var(--gold) instead of '#ffcc00') ---
+        ctx.fillStyle = '#ffcc00'; ctx.fillText(`COINS: ${galaxyCoins}`, 20, 70);
     }
 }
 
